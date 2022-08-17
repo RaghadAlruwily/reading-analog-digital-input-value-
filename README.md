@@ -1,4 +1,4 @@
-# reading-analog-digital-input-value-
+# reading-analog-digital-inputs-values-
 simulate analog &amp; digital input value circuits
 
 -by using tinkercad website-	
