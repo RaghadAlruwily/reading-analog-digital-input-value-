@@ -6,12 +6,12 @@ simulate analog &amp; digital input value circuits
 FOR ANALOG INPUT VALUE CIRCUIT :
 
 tools:
-   ¬ Arduino Uno R3
-   ¬ breadboard
-   ¬ power supply
-   ¬ potentiometer
-   ¬ multimeter
-   ¬ 8 wires
+-  Arduino Uno R3
+-  breadboard
+-  power supply
+-  potentiometer
+-  multimeter  
+-  8 wires
    
    
    
@@ -63,4 +63,52 @@ FOR DIGITAL INPUT SIGNAL CIRCUIT:
 
 
 tools:
-- 
+- Arduino Uno R3
+- breadboard
+- LED
+- Pushbutton
+- Resistor X220
+- Resistor X10
+- 6 wires
+
+
+code:
+// C++ code
+//
+int buttonState = 0;
+
+void setup()
+{
+  pinMode(2, INPUT);
+  pinMode(13, OUTPUT);
+}
+
+void loop()
+{
+  // read the state of the pushbutton
+  buttonState = digitalRead(2);
+  // check if pushbutton is pressed. if it is, the
+  // button state is HIGH
+  if (buttonState == HIGH) {
+    digitalWrite(13, HIGH);
+  } else {
+    digitalWrite(13, LOW);
+  }
+  delay(10); // Delay a little bit to improve simulation performance
+}
+
+
+
+
+Pic for circuit :
+
+![digital circuit](https://user-images.githubusercontent.com/100563503/185045897-85c3c85e-646b-49e6-bb66-f76ea35eabf0.png)
+
+
+
+Run :
+
+
+
+https://user-images.githubusercontent.com/100563503/185046018-13fa6f51-e1c0-46db-a3f4-85e39481aa4e.mp4
+
